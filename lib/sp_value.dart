@@ -1,13 +1,10 @@
-const spValueGenClassName = r'$SharedPrefValueGen';
-const spValueClassName = r'$SharedPrefValue';
-
 typedef SharedPrefGetter<T> = T? Function(String key);
 typedef SharedPrefSetter<T> = Future<bool> Function(String key, T value);
 typedef SharedPrefRemover = Future<bool> Function(String key);
 
 /// Base class for shared preference entries.
-sealed class $SharedPrefValueGen<T> {
-  const $SharedPrefValueGen({
+sealed class SPValueBase<T> {
+  const SPValueBase({
     required SharedPrefGetter<T> getter,
     required SharedPrefSetter<T> setter,
     required SharedPrefRemover remover,
@@ -38,8 +35,8 @@ sealed class $SharedPrefValueGen<T> {
 ///
 /// The [value] getter will return `null` if the value is not found in shared
 /// preferences.
-class $SharedPrefValue<T> extends $SharedPrefValueGen<T> {
-  const $SharedPrefValue({
+class SPValue<T> extends SPValueBase<T> {
+  const SPValue({
     required super.getter,
     required super.setter,
     required super.remover,
@@ -51,8 +48,8 @@ class $SharedPrefValue<T> extends $SharedPrefValueGen<T> {
 ///
 /// The [value] getter will return the [defaultValue] if the value is not found
 /// in shared preferences.
-class $SharedPrefValueWithDefault<T extends Object> extends $SharedPrefValueGen<T> {
-  const $SharedPrefValueWithDefault({
+class SPWithDefault<T extends Object> extends SPValueBase<T> {
+  const SPWithDefault({
     required super.getter,
     required super.setter,
     required super.remover,
