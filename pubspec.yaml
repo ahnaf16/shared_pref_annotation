@@ -1,6 +1,13 @@
 name: shared_pref_annotation
 description: "Annotation package for SharedPref code generation"
+repository: https://github.com/ahnaf16/shared_pref_annotation
+
 version: 0.0.1
+
+topics:
+  - codegen
+  - cli
+  - shared-preferences
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
