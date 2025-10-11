@@ -11,10 +11,10 @@ import 'package:shared_pref_annotation/shared_pref_annotation.dart';
 
 @sharedPref
 class AppPrefs {
-  final String token;
-  final bool isLoggedIn;
-
-  const AppPrefs({this.token = '', this.isLoggedIn = false});
+   String? token;
+   bool isLoggedIn = false;
 }
 
 ```
+
+then run `dart run sp_gen`
