@@ -1,8 +1,7 @@
 # shared_pref_annotation
 
-Annotation package for SharedPref code generation
-
-## Features
+Annotation package for SharedPref code generation.
+To be used alongside [shared_pref_builder](https://pub.dev/packages/shared_pref_builder)
 
 ## Usage
 
