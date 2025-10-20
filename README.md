@@ -16,4 +16,8 @@ class AppPrefs {
 
 ```
 
-then run `dart run sp_gen`
+For more information, visit [shared_pref_builder](https://pub.dev/packages/shared_pref_builder)
+
+## License (BSD-3-Clause)
+
+[LICENSE](https://github.com/ahnaf16/shared_pref_annotation/blob/c943eba59f87961f6b85e7f0e74f5791d904109d/LICENSE)
